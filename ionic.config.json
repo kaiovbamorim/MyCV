@@ -1,0 +1,7 @@
+{
+  "name": "MyCV",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
