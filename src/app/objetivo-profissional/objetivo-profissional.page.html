@@ -1,0 +1,25 @@
+<ion-content [fullscreen]="true">
+  <header class="header-content">
+    <ion-icon (click)="Voltar()" name="chevron-back-outline"></ion-icon>
+    <ion-card-title>Objetivo Profissional</ion-card-title>
+  </header>
+  <div color="primary" class="center">
+    <form name="FormObjetivoResumo" method="POST" action="http://localhost:8000/api/curriculo/obj-profissional">
+      <h2>Conte um pouco sobre você!</h2>
+      <div class="objetivo-resumo">
+        <div class="containter-resumo-objetivo">
+          <p>Digite aqui seu resumo profissional de forma clara e objetiva, destacando suas principais habilidades e
+            experiências.</p>
+          <ion-textarea name="OBJETIVO" [autoGrow]="true" [counter]="true" maxlength="200" label="Resumo profisional"
+            labelPlacement="floating" fill="outline"></ion-textarea>
+        </div>
+        <div class="containter-resumo-objetivo">
+          <p>Escreva um breve resumo profissional destacando suas principais habilidades, experiências e conquistas
+            relevantes para atrair a atenção dos recrutadores.</p>
+          <ion-textarea name="RESUMO" [autoGrow]="true" [counter]="true" maxlength="350" label="Objetivo profisional" labelPlacement="floating" fill="outline"></ion-textarea>
+        </div>
+      </div>
+      <ion-button type="submit" expand="block">Continuar</ion-button>
+    </form>
+  </div>
+</ion-content>

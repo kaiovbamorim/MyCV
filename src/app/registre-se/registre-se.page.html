@@ -1,0 +1,188 @@
+<ion-content [fullscreen]="true">
+  <header class="header-content">
+    <figure class="galeria-camera">
+      <img id="open-modal-foto" expand="block" [src]="userImg" alt="Imagem do Usuário">
+      <div class="add-img">
+        <ion-icon name="add-outline"></ion-icon>
+      </div>
+    </figure>
+  </header>
+  <div class="divider-section"></div>
+  <div color="primary" class="center">
+    <form name="FormRegistrarUsuario" method="POST" action="http://localhost:8000/api/autenticacao/registrar-usuario">
+      <h2>Registre-se</h2>
+      <div class="container-input">
+        <ion-item class="ion-margin-bottom">
+          <ion-icon name="at-outline"></ion-icon>
+          <ion-input type="email" label="E-mail" labelPlacement="floating" name="EMAIL" [(ngModel)]="EMAIL" required></ion-input>
+        </ion-item>
+        <ion-item class="ion-margin-bottom">
+          <ion-icon name="person-outline"></ion-icon>
+          <ion-input type="text" label="Nome completo" labelPlacement="floating" name="NOME" [(ngModel)]="NOME"  required></ion-input>
+        </ion-item>
+        <ion-item class="ion-margin-bottom">
+          <ion-icon name="lock-closed-outline"></ion-icon>
+          <ion-input [type]="passwordType" label="Senha" labelPlacement="floating" name="SENHA" [(ngModel)]="SENHA"  required></ion-input>
+          <ion-icon (click)="togglePassword()" [name]="iconSenha"
+          [color]="passwordShown === false ? 'gray-low' : 'gray-medium'"></ion-icon>
+        </ion-item>
+        <div class="termos">
+          <p>Ao se inscrever, você concorda com o nosso <a id="modal-termos" expand="block" class="termo-servico">Termos
+              de Serviço</a>, e <a id="modal-politica" class="politica-privacidade">Política de
+              Privacidade</a></p>
+        </div>
+      </div>
+      <ion-button type="submit" expand="block">Criar conta</ion-button>
+    </form>
+  </div>
+  <div class="create-account">
+    <p>Já possui conta? <a (click)="toLogin()">Entre aqui</a></p>
+  </div>
+  <ion-modal class="modal-foto" trigger="open-modal-foto" [initialBreakpoint]="1" [breakpoints]="[0, 1]">
+    <ng-template>
+      <div class="block">
+        <div (click)="abrirCamera()" (click)="fecharModal()" class="foto-opcao">
+          <ion-icon name="camera-outline"></ion-icon>
+          <p>Câmera</p>
+        </div>
+        <div (click)="abrirGaleria()" (click)="fecharModal()" class="foto-opcao">
+          <ion-icon name="image-outline"></ion-icon>
+          <p>Galeria</p>
+        </div>
+      </div>
+    </ng-template>
+  </ion-modal>
+
+  <ion-modal class="modal-termos" trigger="modal-termos" [initialBreakpoint]="1" [breakpoints]="[0,1]"
+    handleBehavior="cycle">
+    <ng-template>
+      <ion-toolbar>
+        <ion-title>Termos de Serviços</ion-title>
+        <ion-buttons slot="end">
+          <ion-button color="light" (click)="fecharModal()">Fechar</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+      <ion-content class="content-termos ion-padding">
+        <ion-list>
+          <ion-item>
+            <ion-row>
+              <h2>Uso do Serviço</h2>
+              <p>Ao usar nosso aplicativo de criação de currículos, você concorda em cumprir estes termos de serviço e
+                todas as leis e regulamentações aplicáveis. Você é responsável por garantir a precisão e a veracidade
+                das informações fornecidas ao criar seu currículo.</p>
+            </ion-row>
+          </ion-item>
+          <ion-item>
+            <ion-row>
+              <h2>Conta Premium</h2>
+              <p>Oferecemos uma opção de conta premium paga que oferece recursos adicionais, como designs de
+                currículos
+                ilimitados. Ao optar pela conta premium, você concorda em pagar as taxas aplicáveis conforme
+                estabelecido em nosso site.</p>
+            </ion-row>
+          </ion-item>
+          <ion-item>
+            <ion-row>
+              <h2>Propriedade Intelectual</h2>
+              <p>Todo o conteúdo disponibilizado em nosso aplicativo, incluindo designs de currículos, modelos e
+                outros
+                materiais, são protegidos por direitos autorais. Você não tem permissão para reproduzir, modificar,
+                distribuir ou usar esse conteúdo sem autorização prévia por escrito.</p>
+            </ion-row>
+          </ion-item>
+          <ion-item>
+            <ion-row>
+              <h2>Limitação de Responsabilidade</h2>
+              <p>Nosso aplicativo é fornecido "no estado em que se encontra", sem garantias de qualquer tipo. Não nos
+                responsabilizamos por quaisquer danos diretos, indiretos, incidentais, consequenciais ou outros tipos
+                de
+                danos relacionados ao uso do nosso aplicativo.</p>
+            </ion-row>
+          </ion-item>
+          <ion-item>
+            <ion-row>
+              <h2>Modificações nos Termos de Serviço</h2>
+              <p>Podemos modificar ou atualizar estes termos de serviço a qualquer momento, sem aviso prévio. É sua
+                responsabilidade revisar regularmente os termos de serviço para estar ciente de quaisquer alterações.
+                O
+                uso contínuo do aplicativo após a modificação dos termos de serviço constitui sua aceitação das
+                modificações.</p>
+            </ion-row>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <ion-modal class="modal-politica" trigger="modal-politica" [initialBreakpoint]="1" [breakpoints]="[0,1]"
+    handleBehavior="cycle">
+    <ng-template>
+      <ion-toolbar>
+        <ion-title>Política de Privacidade</ion-title>
+        <ion-buttons slot="end">
+          <ion-button color="light" (click)="fecharModal()">Fechar</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+      <ion-content class="content-termos ion-padding">
+        <ion-list>
+          <ion-item>
+            <ion-row>
+              <h2>Privacidade</h2>
+              <p>Respeitamos a sua privacidade e proteção de dados. Coletamos, armazenamos e processamos informações
+                pessoais de acordo com nossa Política de Privacidade. Ao usar nosso aplicativo, você concorda com a
+                coleta e o uso dessas informações de acordo com a nossa Política de Privacidade.</p>
+            </ion-row>
+          </ion-item>
+          <ion-item>
+            <ion-row>
+              <h2>Informações Coletadas</h2>
+              <p>Informações Coletadas
+                Ao usar nosso aplicativo, podemos coletar informações pessoais, como nome, endereço de e-mail e detalhes
+                do currículo. Essas informações são necessárias para fornecer nossos serviços e melhorar a experiência
+                do usuário.</p>
+            </ion-row>
+          </ion-item>
+          <ion-item>
+            <ion-row>
+              <h2>Uso das Informações</h2>
+              <p>Utilizamos as informações coletadas para gerar o currículo solicitado, fornecer suporte ao cliente,
+                personalizar o conteúdo do aplicativo, processar pagamentos (se aplicável) e enviar comunicações
+                relacionadas ao serviço.</p>
+            </ion-row>
+          </ion-item>
+          <ion-item>
+            <ion-row>
+              <h2>Compartilhamento de Informações</h2>
+              <p>Compartilhamento de Informações
+                Não compartilhamos suas informações pessoais com terceiros, exceto nas circunstâncias descritas nesta
+                Política de Privacidade, visando fornecer e melhorar nossos serviços, bem como cumprir com obrigações
+                legais e regulatórias. As informações compartilhadas serão sempre tratadas com confidencialidade e de
+                acordo com os termos estabelecidos nesta política.</p>
+            </ion-row>
+          </ion-item>
+          <ion-item>
+            <ion-row>
+              <h2>Limitação de Responsabilidade</h2>
+              <p>Nosso aplicativo é fornecido "no estado em que se encontra", sem garantias de qualquer tipo. Não nos
+                responsabilizamos por quaisquer danos diretos, indiretos, incidentais, consequenciais ou outros tipos
+                de
+                danos relacionados ao uso do nosso aplicativo.</p>
+            </ion-row>
+          </ion-item>
+          <ion-item>
+            <ion-row>
+              <h2>Modificações nos Termos de Serviço</h2>
+              <p>Podemos modificar ou atualizar estes termos de serviço a qualquer momento, sem aviso prévio. É sua
+                responsabilidade revisar regularmente os termos de serviço para estar ciente de quaisquer alterações.
+                O
+                uso contínuo do aplicativo após a modificação dos termos de serviço constitui sua aceitação das
+                modificações.</p>
+            </ion-row>
+          </ion-item>
+        </ion-list>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+
+</ion-content>

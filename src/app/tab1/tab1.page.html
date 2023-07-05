@@ -1,17 +1,77 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+  <ion-header>
     <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
+      <h1 slot="start">Olá, Kaio!</h1>
+      <ion-img slot="end" src="../../assets/avatar.png" alt="Foto Perfil"></ion-img>
     </ion-toolbar>
   </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <main>
+    <h2 class="title-modelos">Modelo simples</h2>
+    <swiper-container class="ion-padding" #swiper [slidesPerView]="2.5" [intialSlide]="1" [spaceBetween]="20"
+      (afterinit)="swiperReady()">
+      <swiper-slide>
+        <ion-thumbnail (click)="goPageCurriculo()">
+          <img alt="Silhouette of mountains" src="../../assets/img-curriculo.png" />
+        </ion-thumbnail>
+      </swiper-slide>
+      <swiper-slide>
+        <ion-thumbnail (click)="goPageCurriculo()">
+          <img alt="Silhouette of mountains" src="../../assets/img-curriculo.png" />
+        </ion-thumbnail>
+      </swiper-slide>
+      <swiper-slide>
+        <ion-thumbnail (click)="goPageCurriculo()">
+          <img alt="Silhouette of mountains" src="../../assets/img-curriculo.png" />
+        </ion-thumbnail>
+      </swiper-slide>
+      <swiper-slide>
+        <ion-thumbnail (click)="goPageCurriculo()">
+          <img alt="Silhouette of mountains" src="../../assets/img-curriculo.png" />
+        </ion-thumbnail>
+      </swiper-slide>
+    </swiper-container>
+    <h2 class="title-modelos">Mais design</h2>
+    <swiper-container class="ion-padding" #swiper [slidesPerView]="2.5" [intialSlide]="1" [spaceBetween]="20"
+      (afterinit)="swiperReady()">
+      <swiper-slide>
+        <ion-thumbnail (click)="goPageCurriculo()">
+          <img alt="Silhouette of mountains" src="../../assets/img-curriculo.png" />
+        </ion-thumbnail>
+      </swiper-slide>
+      <swiper-slide>
+        <ion-thumbnail (click)="goPageCurriculo()">
+          <img alt="Silhouette of mountains" src="../../assets/img-curriculo.png" />
+        </ion-thumbnail>
+      </swiper-slide>
+      <swiper-slide>
+        <ion-thumbnail (click)="goPageCurriculo()">
+          <img alt="Silhouette of mountains" src="../../assets/img-curriculo.png" />
+        </ion-thumbnail>
+      </swiper-slide>
+    </swiper-container>
+    <h2 class="title-modelos">Modelo Premium </h2>
+    <swiper-container class="ion-padding" #swiper [slidesPerView]="2.5" [intialSlide]="1" [spaceBetween]="20"
+      (afterinit)="swiperReady()">
+      <swiper-slide>
+        <ion-thumbnail (click)="goPageCurriculo()">
+          <img alt="Silhouette of mountains" src="../../assets/img-curriculo.png" />
+        </ion-thumbnail>
+      </swiper-slide>
+      <swiper-slide>
+        <ion-thumbnail (click)="goPageCurriculo()">
+          <img alt="Silhouette of mountains" src="../../assets/img-curriculo.png" />
+        </ion-thumbnail>
+      </swiper-slide>
+      <swiper-slide>
+        <ion-thumbnail (click)="goPageCurriculo()">
+          <img alt="Silhouette of mountains" src="../../assets/img-curriculo.png" />
+        </ion-thumbnail>
+      </swiper-slide>
+      <swiper-slide>
+        <ion-thumbnail (click)="goPageCurriculo()">
+          <img alt="Silhouette of mountains" src="../../assets/img-curriculo.png" />
+        </ion-thumbnail>
+      </swiper-slide>
+    </swiper-container>
+  </main>
 </ion-content>

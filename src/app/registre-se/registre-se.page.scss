@@ -1,0 +1,126 @@
+//CONTEÚDO PAGINA REGISTRE-SE
+ion-content::part(scroll) {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+ion-content {
+  header {
+    background: #000;
+    color: #fff;
+    height: 30%;
+    display: flex;
+    position: relative;
+    min-height: 260px;
+
+    .galeria-camera {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 46px;
+
+      img {
+        width: 160px;
+        max-width: 200px;
+        height: 160px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .add-img {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        right: 50%;
+        transform: translate(70px, 50px);
+        border-radius: 50%;
+        background-color: var(--ion-color-primary);
+
+        ion-icon {
+          width: 100%;
+          height: 100%;
+          scale: 0.7;
+        }
+      }
+
+    }
+  }
+
+  .center {
+    padding: 30px 30px;
+    position: relative;
+
+    h2 {
+      font-size: 2.8rem;
+      margin: 26px 0;
+      margin-top: 0;
+    }
+
+    form {
+      padding-bottom: 20px;
+
+      ion-button {
+        margin-bottom: 20px;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .termos {
+    margin-top: 20px;
+    padding: 0 5px;
+
+    .termo-servico,
+    .politica-privacidade {
+      color: #4285F4;
+      text-decoration: none;
+    }
+  }
+
+  .create-account {
+    position: relative;
+    text-align: center;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    bottom: 30px;
+  }
+}
+
+ion-modal.modal-foto {
+  --height: auto;
+  --border-radius: 20px 20px 0px 0px;
+
+  .block {
+    width: 100%;
+    height: 144px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .foto-opcao {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80px;
+    border-radius: 50%;
+    height: 80px;
+    font-size: 1rem;
+    justify-content: center;
+    transition: .5s;
+
+    ion-icon {
+      font-size: 30px;
+      color: var(--ion-color-primary)
+    }
+  }
+
+  .foto-opcao:hover {
+    background: #f7f7f7;
+    transition: .5s;
+  }
+}

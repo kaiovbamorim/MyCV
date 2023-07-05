@@ -1,0 +1,71 @@
+<ion-content [fullscreen]="true">
+  <header>
+    <ion-icon (click)="voltar()" name="chevron-back-outline"></ion-icon>
+    <ion-card-title>Modelo Simples</ion-card-title>
+  </header>
+  <div color="primary" class="center">
+    <div class="editar-info">
+      <h2>Editar</h2><ion-icon name="create-outline"></ion-icon>
+    </div>
+    <div id="curriculo" #curriculo>
+      <div>
+        <h3>KAIO AMORIM</h3>
+        <ul class="contato">
+          <li>Pernambuco, PA</li>
+          <li>(81) 99528-6212</li>
+          <li>kaiovbamorim@gmail.com</li>
+          <li>kaioamorim.vercel.app</li>
+        </ul>
+        <div class="objetivo">
+          <h3>Objetivo</h3>
+          <p>Substituta esse texto por um objetivo curto e direto, mais ou menos nesse tamanho.</p>
+        </div>
+        <div class="experiencia">
+          <h3>Experiência</h3>
+          <div class="content-experiencia">
+            <h4 class="data-emprego">20/12/21 - 01/12/23</h4>
+            <h4 class="cargo-emprego">Cargo | Nome | Cidade</h4>
+            <p>Substituta esse texto por um objetivo curto e direto, mais ou menos nesse tamanho.</p>
+          </div>
+          <div class="content-experiencia">
+            <h4 class="data-emprego">20/12/21 - 01/12/23</h4>
+            <h4 class="cargo-emprego">Cargo | Nome | Cidade</h4>
+            <p>Substituta esse texto por um objetivo curto e direto, mais ou menos nesse tamanho.</p>
+          </div>
+        </div>
+        <div class="formacao">
+          <h3>Formação</h3>
+          <div class="content">
+            <ul>
+              <li>Nome da instituição</li>
+              <li>Nome curso</li>
+              <li>01/02/21 - 12/12/23
+              <li>
+            </ul>
+          </div>
+          <div class="content">
+            <ul>
+              <li>Nome da instituição</li>
+              <li>Nome curso</li>
+              <li>01/02/21 - 12/12/23
+              <li>
+            </ul>
+          </div>
+        </div>
+        <div class="info-adicionais">
+          <h3>Informações Adicionais</h3>
+          <div class="content">
+            <ul>
+              <li>CURSO 1</li>
+              <li>CURSO 2</li>
+              <li>CURSO 3</li>
+              <li>CURSO 4</li>
+              <li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ion-button (click)="printPDF()" expand="block">Baixar currículo</ion-button>
+  </div>
+</ion-content>

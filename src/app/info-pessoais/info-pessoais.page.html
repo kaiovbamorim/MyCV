@@ -1,0 +1,67 @@
+<ion-content [fullscreen]="true">
+  <header class="header-content">
+    <ion-icon name="chevron-back-outline"></ion-icon>
+    <ion-card-title>Informações Pessoais</ion-card-title>
+  </header>
+  <div color="primary" class="center">
+    <form name="FormInfoPessoais" method="POST" action="http://localhost:8000/api/curriculo/info-pessoais">
+      <h2>Preencha suas informações pessoais.</h2>
+      <div class="container-input">
+        <ion-item class="ion-margin-bottom">
+          <ion-icon name="person-outline"></ion-icon>
+          <ion-input type="text" label="Nome completo" labelPlacement="floating" name="NOME" required></ion-input>
+        </ion-item>
+        <ion-item class="ion-margin-bottom">
+          <ion-icon name="at-outline"></ion-icon>
+          <ion-input type="email" label="E-mail" labelPlacement="floating" name="EMAIL" required></ion-input>
+        </ion-item>
+        <ion-item class="ion-margin-bottom">
+          <ion-icon name="call-outline"></ion-icon>
+          <ion-input type="text" label="Telefone" labelPlacement="floating" name="TELEFONE" maxlength="11" required></ion-input>
+        </ion-item>
+        <ion-item class="ion-margin-bottom">
+          <ion-icon name="briefcase-outline"></ion-icon>
+          <ion-input type="email" label="Cargo desejado" labelPlacement="floating"
+            name="CARGODESEJADO" required></ion-input>
+        </ion-item>
+        <ion-item class="ion-margin-bottom">
+          <ion-icon name="link-outline"></ion-icon>
+          <ion-input type="email" label="Link" labelPlacement="floating" name="LINK" required></ion-input>
+        </ion-item>
+        <ion-item class="ion-margin-bottom">
+          <ion-icon name="business-outline"></ion-icon>
+          <ion-select label="Estado" name="ESTADO" label-placement="floating">
+            <ion-select-option value="AC" name="ESTADO">Acre</ion-select-option>
+            <ion-select-option value="AL" name="ESTADO">Alagoas</ion-select-option>
+            <ion-select-option value="AP" name="ESTADO">Amapá</ion-select-option>
+            <ion-select-option value="AM" name="ESTADO">Amazonas</ion-select-option>
+            <ion-select-option value="BA" name="ESTADO">Bahia</ion-select-option>
+            <ion-select-option value="CE" name="ESTADO">Ceará</ion-select-option>
+            <ion-select-option value="DF" name="ESTADO">Distrito Federal</ion-select-option>
+            <ion-select-option value="ES" name="ESTADO">Espírito Santo</ion-select-option>
+            <ion-select-option value="GO" name="ESTADO">Goiás</ion-select-option>
+            <ion-select-option value="MA" name="ESTADO">Maranhão</ion-select-option>
+            <ion-select-option value="MT" name="ESTADO">Mato Grosso</ion-select-option>
+            <ion-select-option value="MS" name="ESTADO">Mato Grosso do Sul</ion-select-option>
+            <ion-select-option value="MG" name="ESTADO">Minas Gerais</ion-select-option>
+            <ion-select-option value="PA" name="ESTADO">Pará</ion-select-option>
+            <ion-select-option value="PB" name="ESTADO">Paraíba</ion-select-option>
+            <ion-select-option value="PR" name="ESTADO">Paraná</ion-select-option>
+            <ion-select-option value="PE" name="ESTADO">Pernambuco</ion-select-option>
+            <ion-select-option value="PI" name="ESTADO">Piauí</ion-select-option>
+            <ion-select-option value="RJ" name="ESTADO">Rio de Janeiro</ion-select-option>
+            <ion-select-option value="RN" name="ESTADO">Rio Grande do Norte</ion-select-option>
+            <ion-select-option value="RS" name="ESTADO">Rio Grande do Sul</ion-select-option>
+            <ion-select-option value="RO" name="ESTADO">Rondônia</ion-select-option>
+            <ion-select-option value="RR" name="ESTADO">Roraima</ion-select-option>
+            <ion-select-option value="SC" name="ESTADO">Santa Catarina</ion-select-option>
+            <ion-select-option value="SP" name="ESTADO">São Paulo</ion-select-option>
+            <ion-select-option value="SE" name="ESTADO">Sergipe</ion-select-option>
+            <ion-select-option value="TO" name="ESTADO">Tocantins</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </div>
+      <ion-button type="submit" expand="block">Continuar</ion-button>
+    </form>
+  </div>
+</ion-content>

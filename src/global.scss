@@ -1,26 +1,138 @@
-/*
- * App Global CSS
- * ----------------------------------------------------------------------------
- * Put style rules here that you want to apply globally. These styles are for
- * the entire app and not just one component. Additionally, this file can be
- * used as an entry point to import other CSS/Sass files to be included in the
- * output CSS.
- * For more information on global stylesheets, visit the documentation:
- * https://ionicframework.com/docs/layout/global-stylesheets
- */
-
-/* Core CSS required for Ionic components to work properly */
 @import "@ionic/angular/css/core.css";
-
-/* Basic CSS for apps built with Ionic */
 @import "@ionic/angular/css/normalize.css";
 @import "@ionic/angular/css/structure.css";
 @import "@ionic/angular/css/typography.css";
 @import '@ionic/angular/css/display.css';
-
-/* Optional CSS utils that can be commented out */
 @import "@ionic/angular/css/padding.css";
 @import "@ionic/angular/css/float-elements.css";
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+ion-content {
+    --keyboard-offset: 0 !important;
+}
+
+// ESTILIZAÇÃO INPUT 
+
+.container-input {
+    padding-bottom: 20px;
+
+    ion-item {
+        margin-bottom: 0;
+
+        ion-icon {
+            color: var(--gray-medium);
+            margin-right: 10px !important;
+        }
+
+        ion-icon:last-child {
+            position: absolute;
+            right: 0;
+            z-index: 3;
+        }
+
+        ion-input {
+            border-bottom: 1px solid var(--gray-low);
+            color: var(--dark);
+        }
+    }
+}
+
+
+
+ion-button {
+    --box-shadow: none !important;
+    --border-radius: 20px;
+    text-transform: none !important;
+    width: 100%;
+    height: 55px;
+    font-weight: 700;
+}
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+    margin: 0;
+    color: var(--black);
+}
+
+// REMOVE LINHA DO HEADER
+.header-md::after {
+    content: none;
+}
+
+// BUTTON GOOGLE 
+ion-button.button-google {
+    --background: #ede9fa;
+    color: #3C4043;
+
+    svg {
+        width: 24px;
+        height: 24px;
+        margin-right: 16px;
+
+    }
+}
+
+ion-button.button-google:hover {
+    --background: #d8cefa !important;
+    --background-hover: #d8cefa !important;
+    --background-activated: #d8cefa !important;
+    --background-focused: #d8cefa;
+}
+
+// REMOVE OS ESPAÇAMENTOS INDESEJADOS NOS INPUTS
+ion-item {
+    --padding-start: 0px;
+    --inner-padding-end: 0px;
+    --ion-safe-area-left: 0px;
+    --inner-border-width: 0px;
+    --margin-bottom: 0px;
+}
+
+// HEADER CONTENT 
+
+.header-content::after {
+    content: "";
+    width: 100vw;
+    min-height: 80px;
+    border-radius: 50px 50px 0 0;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+}
+
+
+
+// MODAL TERMOS DE SEVIÇOS E POLÍTICA DE PRIVACIDADE
+
+ion-modal.modal-termos,
+ion-modal.modal-politica {
+    --height: 50%;
+    --border-radius: 16px;
+    --box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --backdrop-opacity: var(--ion-backdrop-opacity, 0.7);
+    --ion-color-step-350: var(--ion-color-primary);
+
+    ion-toolbar {
+        --background: var(--ion-color-primary);
+        --color: white;
+    }
+
+    ion-content.content-termos {
+        --padding-top: 0;
+
+        h2 {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
+    }
+}

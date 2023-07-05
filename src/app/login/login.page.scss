@@ -1,0 +1,127 @@
+ion-content {
+  --padding-start: 0px;
+  --ion-safe-area-left: 0px;
+  --keyboard-offset: 0 !important;
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #000;
+    color: #fff;
+    position: relative;
+    padding: 40px 30px;
+    height: 30%;
+    min-height: 200px;
+
+    h1 {
+      font-size: 3rem;
+      color: #fff;
+    }
+
+    p {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 56px;
+    }
+  }
+
+  header::after {
+    content: "";
+    width: 100vw;
+    min-height: 80px;
+    border-radius: 50px 50px 0 0;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    bottom: -30px;
+  }
+
+  .center {
+    z-index: 99;
+    padding: 30px;
+
+    h2 {
+      font-size: 2.8rem;
+      margin: 26px 0;
+      margin-top: 0;
+    }
+
+
+    form {
+      padding-bottom: 20px;
+
+      .container-input {
+        padding-bottom: 20px;
+
+        ion-item {
+          --padding-start: 0px;
+          --inner-padding-end: 0px;
+          --ion-safe-area-left: 0px;
+          --inner-border-width: 0px;
+          --margin-bottom: 0px;
+          margin-bottom: 0;
+
+          ion-icon {
+            color: var(--gray-medium);
+            margin-right: 10px !important;
+          }
+
+          ion-icon:last-child {
+            position: absolute;
+            right: 0;
+            z-index: 3;
+          }
+
+          ion-input {
+            border-bottom: 1px solid var(--gray-low);
+            color: var(--dark);
+
+            ion-label {
+              color: blueviolet
+            }
+          }
+        }
+      }
+
+      ion-button {
+        width: 100%;
+        margin-bottom: 20px;
+        height: 55px;
+        font-size: 1.2rem;
+      }
+
+      .button-divider {
+        width: 100%;
+        height: 2px;
+        background-color: var(--gray-low);
+        margin-bottom: 20px;
+        border-radius: 5px;
+        position: relative;
+
+        span {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          font-size: .7rem;
+          transform: translate(-50%, -50%);
+          background-color: white;
+          color: var(--gray-medium);
+          padding: 10px;
+        }
+      }
+    }
+  }
+
+  .password-recovery {
+    text-align: right;
+    font-weight: 600;
+    padding-top: 20px;
+  }
+
+  .create-account {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}

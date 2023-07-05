@@ -1,0 +1,67 @@
+<ion-content scrollY="false">
+  <swiper-container #swiper (afterinit)="swiperReady()" [pagination]="true">
+    <swiper-slide class="slide-1">
+      <ion-content scrollY="false" [fullscreen]="true">
+        <header>
+          <ion-card-title>Bem-vindo</ion-card-title>
+          <ion-icon (click)="proximoSlide()" name="chevron-forward-outline"></ion-icon>
+        </header>
+        <figure>
+          <img src="../../assets/hand.png" alt="Home MyCV">
+        </figure>
+        <div class="text-slide">
+          <p>Bem-vindo ao nosso aplicativo de criação de currículos! Aqui você encontrará a ferramenta perfeita para
+            destacar suas habilidades e conquistar as melhores oportunidades profissionais. </p>
+        </div>
+      </ion-content>
+    </swiper-slide>
+    <swiper-slide class="slide-2">
+      <ion-content scrollY="false" [fullscreen]="true">
+        <header>
+          <ion-card-title>Aplicação e Benefícios</ion-card-title>
+          <ion-icon (click)="proximoSlide()" name="chevron-forward-outline"></ion-icon>
+        </header>
+        <figure>
+          <img src="../../assets/home.png" alt="Home MyCV">
+        </figure>
+        <div class="text-slide">
+          <p>Aqui você terá acesso a uma poderosa ferramenta de criação de currículos, projetada para personalizar seu
+            perfil profissional. Explore nossa variedade de layouts modernos e atraentes, destacando suas experiências e
+            habilidades.</p>
+        </div>
+      </ion-content>
+    </swiper-slide>
+    <swiper-slide class="slide-3">
+      <ion-content scrollY="false" [fullscreen]="true">
+        <header>
+          <ion-card-title>Plano Premium</ion-card-title>
+          <ion-icon (click)="proximoSlide()" name="chevron-forward-outline"></ion-icon>
+        </header>
+        <figure>
+          <img src="../../assets/trofeu_premium.png" alt="Troféu Plano Premium">
+        </figure>
+        <div class="text-slide">
+          <p>Eleve sua candidatura com nosso Plano Premium! Desbloqueie currículos ilimitados e layouts premium para
+            destacar seu currículo. Invista em seu futuro profissional e alcance suas metas com confiança!</p>
+        </div>
+      </ion-content>
+    </swiper-slide>
+    <swiper-slide class="slide-4">
+      <ion-content scrollY="false" [fullscreen]="true">
+        <header>
+          <ion-card-title (click)="AdicionarDados()" >Adicionar dados</ion-card-title>
+          <ion-icon (click)="presentActionSheet()" name="chevron-forward-outline"></ion-icon>
+        </header>
+        <figure>
+          <img src="../../assets/adicionar_dados.png" alt="Adicionar dados">
+        </figure>
+        <div class="text-slide">
+          <p>Está pronto para criar seu currículo de destaque? Adicione seus dados pessoais para personalizar sua
+            experiência ou pule essa etapa e faça mais tarde. Aqui, o poder está em suas mãos. Comece agora e impulsione
+            sua carreira!</p>
+            <ion-button (click)="AdicionarDados()" expand="block">Adicionar Dados</ion-button>
+        </div>
+      </ion-content>
+    </swiper-slide>
+  </swiper-container>
+</ion-content>

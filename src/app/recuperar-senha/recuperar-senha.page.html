@@ -1,0 +1,20 @@
+<ion-content [fullscreen]="true">
+  <header>
+    <ion-icon (click)="voltar()" name="chevron-back-outline"></ion-icon>
+    <ion-card-title>Recupere sua senha</ion-card-title>
+  </header>
+  <div color="primary" class="center">
+    <form>
+      <h2>Digite seu email</h2>
+      <div class="container-input">
+        <p class="text-email">Insira o seu endereço de e-mail abaixo para receber o link de redefinição de senha.</p>
+        <ion-item class="ion-margin-bottom">
+          <ion-icon name="at-outline"></ion-icon>
+          <ion-input type="email" label="E-mail" labelPlacement="floating" name="email" [(ngModel)]="email"
+            required></ion-input>
+        </ion-item>
+      </div>
+      <ion-button (click)="login()" expand="block">Enviar</ion-button>
+    </form>
+  </div>
+</ion-content>

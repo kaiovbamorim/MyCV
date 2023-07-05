@@ -1,0 +1,107 @@
+<ion-content [fullscreen]="true">
+  <header class="header-content">
+    <ion-icon name="chevron-back-outline"></ion-icon>
+    <ion-card-title>Experiência e Formação</ion-card-title>
+  </header>
+  <div color="primary" class="center">
+    <form>
+      <h2>Fale um pouco sobre sua carreira e formação.</h2>
+      <div class="experiencia">
+        <div class="content">
+          <h3>Experiência</h3>
+          <ion-item class="ion-margin-bottom">
+            <ion-icon name="briefcase-outline"></ion-icon>
+            <ion-input type="text" label="Empresa" labelPlacement="floating" name="EMPRESA"></ion-input>
+          </ion-item>
+          <ion-item class="ion-margin-bottom">
+            <ion-icon name="id-card-outline"></ion-icon>
+            <ion-input type="text" label="Cargo" labelPlacement="floating" name="CARGO"></ion-input>
+          </ion-item>
+          <div class="container-data">
+            <ion-item class="ion-margin-bottom item-data-inicio">
+              <ion-icon name="person-outline"></ion-icon>
+              <ion-input type="text" label="Data Início" labelPlacement="floating" name="DATAINICIO" maxlength="10" placeholder="00/00/0000" required ></ion-input>
+            </ion-item>
+            <ion-item class="ion-margin-bottom item-data-fim">
+              <ion-input type="text" id="dateInput" label="Data Fim" labelPlacement="floating" name="DATAFIM" maxlength="10" placeholder="00/00/0000" required></ion-input>
+            </ion-item>
+          </div>
+          <div class="container-atividades">
+            <p>Descreva brevemente suas atividades e realizações na empresa.</p>
+            <ion-textarea [autoGrow]="true" [counter]="true" maxlength="120" label="Função" labelPlacement="floating"
+              fill="outline"></ion-textarea>
+          </div>
+        </div>
+        <!-- <div class="content">
+          <h3>Experiência</h3>
+          <ion-item class="ion-margin-bottom">
+            <ion-icon name="briefcase-outline"></ion-icon>
+            <ion-input type="text" label="Empresa" labelPlacement="floating" name="EMPRESA"></ion-input>
+          </ion-item>
+          <ion-item class="ion-margin-bottom">
+            <ion-icon name="id-card-outline"></ion-icon>
+            <ion-input type="text" label="Cargo" labelPlacement="floating" name="CARGO"></ion-input>
+          </ion-item>
+          <div class="container-data">
+            <ion-item class="ion-margin-bottom item-data-inicio">
+              <ion-icon name="person-outline"></ion-icon>
+              <ion-input type="number" label="Data Início" labelPlacement="floating" name="DATAINICIO"
+                required></ion-input>
+            </ion-item>
+            <ion-item class="ion-margin-bottom item-data-fim">
+              <ion-input type="number" label="Data Fim" labelPlacement="floating" name="DATAFIM" required></ion-input>
+            </ion-item>
+          </div>
+          <div class="container-atividades">
+            <p>Descreva brevemente suas atividades e realizações na empresa.</p>
+            <ion-textarea [autoGrow]="true" [counter]="true" maxlength="100" label="Função" labelPlacement="floating"
+              fill="outline"></ion-textarea>
+          </div>
+        </div> -->
+      </div>
+      <div class="experiencia">
+        <div class="content">
+          <h3>Formação</h3>
+          <ion-item class="ion-margin-bottom">
+            <ion-icon name="briefcase-outline"></ion-icon>
+            <ion-input type="text" label="Instituição" labelPlacement="floating" name="EMPRESA"></ion-input>
+          </ion-item>
+          <ion-item class="ion-margin-bottom">
+            <ion-icon name="id-card-outline"></ion-icon>
+            <ion-input type="text" label="Curso" labelPlacement="floating" name="CARGO"></ion-input>
+          </ion-item>
+          <div class="container-data">
+            <ion-item class="ion-margin-bottom item-data-inicio">
+              <ion-icon name="person-outline"></ion-icon>
+              <ion-input type="text" label="Data Início" labelPlacement="floating" name="DATAINICIOEDU" maxlength="10" placeholder="00/00/0000" required></ion-input>
+            </ion-item>
+            <ion-item class="ion-margin-bottom item-data-fim">
+              <ion-input type="text" label="Data Fim" labelPlacement="floating" name="DATAFIMEDU"  maxlength="10" placeholder="00/00/0000" required></ion-input>
+            </ion-item>
+          </div>
+        </div>
+        <!-- <div class="content">
+          <h3>Formação</h3>
+          <ion-item class="ion-margin-bottom">
+            <ion-icon name="briefcase-outline"></ion-icon>
+            <ion-input type="text" label="Instituição" labelPlacement="floating" name="EMPRESA"></ion-input>
+          </ion-item>
+          <ion-item class="ion-margin-bottom">
+            <ion-icon name="id-card-outline"></ion-icon>
+            <ion-input type="text" label="Curso" labelPlacement="floating" name="CARGO"></ion-input>
+          </ion-item>
+          <div class="container-data">
+            <ion-item class="ion-margin-bottom item-data-inicio">
+              <ion-icon name="person-outline"></ion-icon>
+              <ion-input type="text" label="Data Início" labelPlacement="floating" name="DATAINICIOEDU" maxlength="10" placeholder="00/00/0000" required></ion-input>
+            </ion-item>
+            <ion-item class="ion-margin-bottom item-data-fim">
+              <ion-input type="text" label="Data Fim" labelPlacement="floating" name="DATAFIMEDU"  maxlength="10" placeholder="00/00/0000" required></ion-input>
+            </ion-item>
+          </div>
+        </div> -->
+      </div>
+      <ion-button expand="block">Continuar</ion-button>
+    </form>
+  </div>
+</ion-content>

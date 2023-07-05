@@ -1,0 +1,127 @@
+//MAIN
+
+ion-content::part(scroll) {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+ion-content {
+    --background: white;
+    --padding-start: 0px;
+    --ion-safe-area-left: 0px;
+    --keyboard-offset: 0 !important;
+
+    #background-content {
+        background: var(--background);
+    }
+
+    .header-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background: black;
+        color: white;
+        padding: 40px 30px;
+        height: 30%;
+        min-height: 200px;
+        position: relative;
+
+        ion-icon {
+            font-size: 40px;
+        }
+
+        ion-card-title {
+            font-size: 2rem;
+            font-weight: bold;
+            text-align: right;
+            max-width: 80%;
+            color: white;
+            margin: 0;
+        }
+
+        p {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 56px;
+        }
+    }
+
+    .center {
+        padding: 30px 30px;
+        background-color: white;
+        border-radius: 50px 50px 0 0;
+
+        h2 {
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: var(--black);
+            margin: 0;
+            margin-bottom: 24px;
+        }
+
+
+        form {
+            padding: 20px 0;
+
+            .experiencia {
+
+                h3 {
+                    color: var(--ion-color-primary);
+                }
+
+                .content {
+                    ion-item {
+                        ion-icon {
+                            color: var(--gray-medium);
+                            margin-right: 10px !important;
+                        }
+
+                        ion-input {
+                            border-bottom: 1px solid var(--gray-low);
+                            color: var(--dark);
+                            margin: 4px;
+                        }
+                        
+                        ion-icon:last-child {
+                            color: var(--ion-color-primary);
+                            margin: 0;
+                            font-size: 32px;
+                        }
+                    }
+
+                    #habilidades {
+                        border-radius: 12px;
+                        background-color: #d4d4d4;
+
+                        ion-item-sliding {
+                            border-radius: 12px;
+                            margin-bottom: 12px;
+                            ion-item {
+                                --background: #d4d4d4;
+                                --border-radius: 12px;
+
+                                ion-label {
+                                    color: var(--ion-color-primary);
+                                    font-size: 1.2rem;
+                                    padding-left: 10px;
+                                }
+                            }
+
+                            ion-item-option {
+                                border-radius: 0px 12px 12px 0px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            ion-button {
+                width: 100%;
+                height: 55px;
+                font-weight: 700;
+                font-size: 1.2rem;
+                margin: 50px 0;
+            }
+        }
+    }
+}
